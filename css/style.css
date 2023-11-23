@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding-top:50px ;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.parent1{
+ position: fixed;
+ width: 100%;
+ z-index: 11111;
+ top: 0;
+ background: linear-gradient(to bottom,#040404,#000000,#656565 );
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 50px;
+}
+.child{
+    width: 80%;
+    margin: auto;
+}
+.parent3 .child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    top: -50px;
+   
+}
+.sport{
+  height: 80px;
+    width:max(23%,200px);
+ 
+    border: 2px solid yellow;
+    background-repeat: no-repeat;
+    background-size:100% 100% ;
+
+
+}
+.sport1{
+    background-image: url(../images/tennisacademy.jpg);
+   
+    
+}
+.sport2{
+    background-image: url(../images/swimmingacademy.jpg);
+}
+.sport3{
+    background-image: url(../images/squashacademy.jpg);
+}
+.sport4{
+    background-image: url(../images/footballacademy.jpg);
+}
+.overlay{
+    
+    width: 100%;
+    height: 100%;
+    background-color: #ffff08d0;
+    transition:1s all ease;
+    clip-path: circle(0% at 0% 0%);
+}
+.sport:hover .overlay{
+    clip-path: circle(50% at 0% 0%);
+}
+
+.sport img{
+    height: 100%;
+    width: 100%;
+    
+}
+.now{
+    
+    opacity: 0.9;
+ }
+.parent2{
+    text-align: center;
+   height: 75vh;
+    width: 100%;
+    background-color:   yellow;
+   
+}
+h1{
+   text-align: center;
+  
+   color: rgb(66, 66, 251);
+}
+hr{
+    width: 50%;
+    color: rgb(149, 140, 140);
+    margin: auto;
+    margin-bottom: 15px;
+}
+.parent2 img{
+    width: 100%;
+    height: 100%;
+    clip-path: circle(65% at 50% 0%);
+}
+.parent1 img{
+    line-height:50px ;
+    width: 50px;
+}
+
+ .nav li{
+    
+    width: 100px;
+    text-align: center;
+    line-height:50px ;
+    padding-right: 20px;
+    list-style: none;
+} 
+
+.nav{
+    display: flex;
+    flex-direction: row;
+}
+.nav li:hover{
+    opacity: 0.9;
+}
+.parent1 a{
+    
+    text-decoration: none;
+    color: white;
+}
+.parent3{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-block: 30px;
+}
+
+
+i{
+    font-size: 30px;
+    color: white;
+}
+
+
+.parent3,.parent4{
+    padding-inline: 20px;
+}
+.parent1{
+    padding-inline: 20px;
+}
+.parent4 .child{
+    color: rgb(66, 66, 251);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.parent4 .child .right{
+    border-radius: 5px;
+    height: 326px;
+}
+.left{
+    width: max(45%,400px);
+
+}
+.right{
+    background-image: url(../images/about.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    width: max(45%,400px);
+}
+.overlay2{
+    
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffc5;
+    transition:1s all ease;
+    clip-path: circle(0% at 50% 50%);
+}
+.right:hover .overlay2{
+    clip-path: circle(100% at 50% 50%);
+}
+.gray{
+    background-color: #979595;
+}
+.day{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.parent6 .child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.news{
+    border: 2px black solid;
+    width: max(30%,250px);
+}
+.news img{
+    width: 100%;
+}
+.parent7 .child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: yellow;
+    padding-block: 4px;
+    margin-block: 50px;
+}
+.parent7 img{
+    width: max(35%,250px);
+}
+.parent7 iframe{
+    width: max(55%,250px);
+}
+.parent8 iframe{
+    width: 100%;
+}
+.parent6,.parent5{
+    margin-block: 50px;
+}
+@media screen and (max-width: 1072px){
+    .sport , .news ,.parent7 img{
+        margin-bottom:10px ;
+    }
+    .parent4 .child{
+        justify-content: center;
+     }
+     .parent2{
+        height: 75vw;
+     }
+}
+@media screen and (max-width: 564px){
+    .parent3 .child{
+       justify-content: center;
+    }
+    .parent1{
+        flex-direction: column;
+
+    }
+    .nav li{
+        width:20%
+    }
+    .parent1{
+        height: 100px;
+        
+    }
+    .parent1 img {
+       line-height: 50px;
+       margin: auto;
+      
+    }
+}
+@media screen and (max-width: 650px){
+    .parent6 .child{
+        justify-content: center;
+     }
+     
+}
+@media screen and (max-width: 710px){
+    .parent7 .child{
+        justify-content: center;
+     }
+}
